@@ -1,0 +1,1518 @@
+/* =========================================================
+   ENVELOPE PAGE
+   SOFT BLUE + CREAM SCRAPBOOK THEME
+   ========================================================= */
+
+
+/* =========================================================
+   OPENING SCREEN
+   ========================================================= */
+
+.envelope-opening-screen {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(255, 255, 255, 0.42),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(255, 255, 255, 0.24),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #7898c9 0%,
+      #6f90c1 45%,
+      #6486b8 100%
+    );
+
+  font-family:
+    "Comic Sans MS",
+    "Segoe Print",
+    "Bradley Hand",
+    cursive;
+}
+
+
+/* =========================================================
+   SCRAPBOOK PAPER TEXTURE
+   ========================================================= */
+
+.envelope-opening-screen::before,
+.song-memory-room::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.18;
+
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.18) 0px,
+      rgba(255, 255, 255, 0.18) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(30, 49, 87, 0.045) 0px,
+      rgba(30, 49, 87, 0.045) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+
+  z-index: 0;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.envelope-back-button,
+.memory-back-button {
+  position: absolute;
+
+  top: 28px;
+  left: 30px;
+
+  z-index: 100;
+
+  border: none;
+
+  background: #f8f4e9;
+
+  color: #1e3157;
+
+  padding: 11px 19px;
+
+  border-radius: 4px;
+
+  font-family:
+    "Comic Sans MS",
+    "Segoe Print",
+    cursive;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  box-shadow:
+    3px 4px 0 rgba(30, 49, 87, 0.15),
+    0 7px 14px rgba(30, 49, 87, 0.13);
+
+  transform: rotate(-2deg);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.envelope-back-button:hover,
+.memory-back-button:hover {
+  transform:
+    rotate(-2deg)
+    translateY(-3px);
+
+  box-shadow:
+    4px 7px 0 rgba(30, 49, 87, 0.13),
+    0 10px 18px rgba(30, 49, 87, 0.16);
+}
+
+.envelope-back-button:active,
+.memory-back-button:active {
+  transform:
+    rotate(-2deg)
+    translateY(1px);
+}
+
+
+/* =========================================================
+   FULL SCREEN ENVELOPE
+   ========================================================= */
+
+.full-envelope-area {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  z-index: 5;
+}
+
+.full-envelope {
+  position: relative;
+
+  width: min(1100px, 92vw);
+  height: min(680px, 76vh);
+
+  perspective: 1400px;
+
+  filter:
+    drop-shadow(
+      0 24px 25px rgba(30, 49, 87, 0.18)
+    );
+}
+
+
+/* =========================================================
+   ENVELOPE BACK
+   ========================================================= */
+
+.full-envelope-back {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fffaf0,
+      #f4eddd
+    );
+
+  border-radius: 8px;
+
+  border: 1px solid rgba(30, 49, 87, 0.12);
+
+  box-shadow:
+    inset 0 0 0 8px rgba(255, 255, 255, 0.22),
+    inset 0 0 30px rgba(30, 49, 87, 0.05);
+}
+
+.paper-grain {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.28;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 3px,
+      rgba(30, 49, 87, 0.035) 3px,
+      rgba(30, 49, 87, 0.035) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 5px,
+      rgba(30, 49, 87, 0.025) 5px,
+      rgba(30, 49, 87, 0.025) 6px
+    );
+}
+
+
+/* =========================================================
+   LETTER
+   ========================================================= */
+
+.inside-letter {
+  position: absolute;
+
+  left: 50%;
+  bottom: 12%;
+
+  width: 66%;
+  height: 58%;
+
+  transform:
+    translateX(-50%)
+    translateY(30px);
+
+  background: #fffdf7;
+
+  border: 1px solid rgba(30, 49, 87, 0.08);
+
+  box-shadow:
+    0 8px 20px rgba(30, 49, 87, 0.12);
+
+  opacity: 0;
+
+  transition:
+    transform 1.1s ease,
+    opacity 0.8s ease;
+
+  z-index: 2;
+}
+
+.letter-decoration {
+  position: absolute;
+
+  top: 28px;
+  left: 32px;
+
+  color: #9f1d35;
+
+  font-size: 30px;
+
+  transform: rotate(-8deg);
+}
+
+.letter-lines {
+  position: absolute;
+
+  left: 12%;
+  right: 12%;
+  top: 32%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.letter-lines span {
+  display: block;
+
+  height: 1px;
+
+  background:
+    rgba(30, 49, 87, 0.12);
+}
+
+
+/* =========================================================
+   ENVELOPE FLAP
+   ========================================================= */
+
+.full-envelope-flap {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 55%;
+
+  z-index: 5;
+
+  transform-origin: top center;
+
+  transition:
+    transform 1.1s
+    cubic-bezier(.65, .05, .36, 1);
+}
+
+.flap-paper {
+  width: 100%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffaf0,
+      #eee5d2
+    );
+
+  clip-path:
+    polygon(
+      0 0,
+      100% 0,
+      50% 100%
+    );
+
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
+  filter:
+    drop-shadow(
+      0 7px 6px rgba(30, 49, 87, 0.08)
+    );
+}
+
+
+/* =========================================================
+   ENVELOPE FRONT
+   ========================================================= */
+
+.full-envelope-front {
+  position: absolute;
+  inset: 0;
+
+  z-index: 6;
+
+  pointer-events: none;
+}
+
+.front-left {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      transparent 49.5%,
+      rgba(30, 49, 87, 0.07) 50%,
+      transparent 50.5%
+    );
+}
+
+.front-right {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      225deg,
+      transparent 49.5%,
+      rgba(30, 49, 87, 0.07) 50%,
+      transparent 50.5%
+    );
+}
+
+.front-bottom {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 55%;
+
+  clip-path:
+    polygon(
+      0 100%,
+      50% 0,
+      100% 100%
+    );
+
+  background:
+    linear-gradient(
+      160deg,
+      #f8f0df,
+      #eee3cf
+    );
+}
+
+
+/* =========================================================
+   WAX SEAL
+   ========================================================= */
+
+.big-wax-seal {
+  position: absolute;
+
+  left: 50%;
+  top: 55%;
+
+  transform:
+    translate(-50%, -50%);
+
+  width: 96px;
+  height: 96px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #c8465d,
+      #9f1d35 55%,
+      #7f172c 100%
+    );
+
+  color: #fff4f0;
+
+  font-family: Georgia, serif;
+
+  font-size: 42px;
+
+  box-shadow:
+    0 7px 12px rgba(76, 16, 31, 0.22),
+    inset 3px 3px 5px rgba(255, 255, 255, 0.16);
+
+  z-index: 20;
+
+  transition:
+    transform 0.7s ease,
+    opacity 0.5s ease;
+}
+
+
+/* =========================================================
+   OPENING ANIMATION
+   ========================================================= */
+
+.envelope-opening-screen.opening
+.full-envelope-flap {
+  transform: rotateX(-175deg);
+}
+
+.envelope-opening-screen.opening
+.inside-letter {
+  opacity: 1;
+
+  transform:
+    translateX(-50%)
+    translateY(-65px);
+}
+
+.envelope-opening-screen.opening
+.big-wax-seal {
+  opacity: 0;
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.55);
+}
+
+.envelope-opening-screen.opening
+.full-envelope {
+  animation:
+    envelope-finish 1.8s
+    ease forwards;
+}
+
+@keyframes envelope-finish {
+
+  0% {
+    transform: scale(1);
+  }
+
+  65% {
+    transform: scale(1.04);
+  }
+
+  100% {
+    transform: scale(1.08);
+
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   TAP TO OPEN
+   ========================================================= */
+
+.tap-envelope {
+  position: absolute;
+
+  bottom: 45px;
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  margin: 0;
+
+  color: #fffaf0;
+
+  font-family:
+    "Comic Sans MS",
+    "Segoe Print",
+    cursive;
+
+  font-size: 17px;
+
+  letter-spacing: 0.5px;
+
+  text-shadow:
+    0 2px 4px rgba(30, 49, 87, 0.2);
+
+  animation:
+    tap-pulse 2s ease-in-out infinite;
+}
+
+@keyframes tap-pulse {
+
+  0%,
+  100% {
+    opacity: 0.75;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   OPENING DOODLES
+   ========================================================= */
+
+.opening-doodle {
+  position: absolute;
+
+  z-index: 3;
+
+  color: #f8f4e9;
+
+  opacity: 0.75;
+
+  pointer-events: none;
+}
+
+.opening-flower {
+  left: 12%;
+  top: 23%;
+
+  font-size: 34px;
+
+  color: #f1d5d5;
+
+  transform:
+    rotate(-12deg);
+}
+
+.opening-star-one {
+  right: 14%;
+  top: 27%;
+
+  font-size: 26px;
+}
+
+.opening-star-two {
+  right: 20%;
+  bottom: 23%;
+
+  font-size: 19px;
+}
+
+.opening-heart {
+  left: 18%;
+  bottom: 22%;
+
+  font-size: 34px;
+
+  color: #f0c4d0;
+
+  transform:
+    rotate(9deg);
+}
+
+
+/* =========================================================
+   =========================================================
+   SONG MEMORY ROOM
+   =========================================================
+   ========================================================= */
+
+.song-memory-room {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 10%,
+      rgba(255, 255, 255, 0.42),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 80% 85%,
+      rgba(255, 255, 255, 0.3),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #7898c9,
+      #6b8dbc,
+      #5f81b3
+    );
+
+  color: #1e3157;
+
+  font-family:
+    "Comic Sans MS",
+    "Segoe Print",
+    cursive;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.memory-heading {
+  position: absolute;
+
+  top: 700px;
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  z-index: 100;
+
+  width: max-content;
+
+  max-width: 90%;
+
+  pointer-events: none;
+}
+
+.memory-heading h1 {
+  margin: 0;
+
+  color: #fffaf0;
+
+  font-family:
+    /* "Segoe Print", */
+    /* "Comic Sans MS", */
+    "Lucida Handwriting",
+    cursive;
+
+  font-size:
+    clamp(28px, 3.2vw, 46px);
+
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  line-height: 1.2;
+
+  text-align: center;
+
+  text-shadow:
+    2px 3px 0 rgba(30, 49, 87, 0.12);
+
+  transform:
+    rotate(-1deg);
+}
+
+
+/* =========================================================
+   POLAROID COMPOSITION
+   ========================================================= */
+
+/*
+   THE IMPORTANT FIX:
+   
+   The cards are now positioned much lower.
+   
+   top: 70%
+   
+   means the entire Polaroid group starts
+   well below the heading.
+*/
+
+.vinyl-composition {
+  position: absolute;
+
+  width:
+    min(1200px, 92vw);
+
+  height: 560px;
+
+  left: 50%;
+
+  top: 70%;
+
+  transform:
+    translate(-50%, -35%);
+
+  z-index: 5;
+}
+
+
+/* =========================================================
+   VINYL REMOVED
+   ========================================================= */
+
+.vinyl-record-wrap,
+.vinyl-record,
+.vinyl-label,
+.vinyl-paper-sheet {
+  display: none !important;
+}
+
+
+/* =========================================================
+   POLAROIDS
+   ========================================================= */
+
+.polaroid {
+  position: absolute;
+
+  width: 250px;
+
+  padding:
+    12px
+    12px
+    22px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffdf8,
+      #f8f2e5
+    );
+
+  border:
+    1px solid rgba(30, 49, 87, 0.08);
+
+  box-shadow:
+    5px 7px 0 rgba(30, 49, 87, 0.08),
+    0 13px 25px rgba(30, 49, 87, 0.17);
+
+  z-index: 10;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   CARD POSITIONS
+   ========================================================= */
+
+.polaroid-one {
+  left: 5%;
+
+  top: 25%;
+
+  transform:
+    rotate(-1deg) !important;
+}
+
+.polaroid-two {
+  left: 29%;
+
+  top: 9%;
+
+  transform:
+    rotate(1deg) !important;
+}
+
+.polaroid-three {
+  right: 29%;
+
+  top: 9%;
+
+  transform:
+    rotate(-1deg) !important;
+}
+
+.polaroid-four {
+  right: 5%;
+
+  top: 25%;
+
+  transform:
+    rotate(1deg) !important;
+}
+
+
+/* =========================================================
+   HIDE EXTRA CARDS
+   ========================================================= */
+
+.polaroid-five,
+.polaroid-six {
+  display: none !important;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.polaroid:hover {
+  transform:
+    translateY(-9px)
+    rotate(0deg) !important;
+
+  box-shadow:
+    7px 11px 0 rgba(30, 49, 87, 0.08),
+    0 18px 30px rgba(30, 49, 87, 0.2);
+
+  z-index: 40;
+}
+
+
+/* =========================================================
+   POLAROID INNER
+   ========================================================= */
+
+.polaroid-inner {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+
+  border: none;
+
+  padding: 0;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   PHOTO
+   ========================================================= */
+
+.polaroid-photo {
+  position: relative;
+
+  width: 100%;
+
+  height: 300px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dbe7ed,
+      #c5d8e0
+    );
+
+  border:
+    1px solid rgba(30, 49, 87, 0.08);
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.polaroid-photo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit:  cover;
+object-position:center;
+display: block;
+}
+
+
+/* =========================================================
+   PHOTO PLACEHOLDER
+   ========================================================= */
+
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color:
+    rgba(30, 49, 87, 0.45);
+
+  font-family:
+    "Segoe Print",
+    "Comic Sans MS",
+    cursive;
+
+  font-size: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #e1ebee,
+      #cadde4
+    );
+}
+
+
+/* =========================================================
+   PHOTO COLORS
+   ========================================================= */
+
+.photo-one {
+  background:
+    linear-gradient(
+      135deg,
+      #dce8ed,
+      #c8dce4
+    );
+}
+
+.photo-two {
+  background:
+    linear-gradient(
+      135deg,
+      #e6e2d8,
+      #d5e0df
+    );
+}
+
+.photo-three {
+  background:
+    linear-gradient(
+      135deg,
+      #d4e3ea,
+      #c5d8e0
+    );
+}
+
+.photo-four {
+  background:
+    linear-gradient(
+      135deg,
+      #eee3d9,
+      #d9e4e3
+    );
+}
+
+
+/* =========================================================
+   BLUE WASHI TAPE
+   ========================================================= */
+
+.photo-tape {
+  position: absolute;
+
+  top: -17px;
+
+  width: 76px;
+  height: 25px;
+
+  z-index: 20;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(92, 139, 189, 0.92),
+      rgba(117, 158, 201, 0.94)
+    );
+
+  opacity: 0.92;
+
+  box-shadow:
+    0 2px 3px rgba(30, 49, 87, 0.1);
+
+  transform:
+    rotate(-3deg);
+
+  clip-path:
+    polygon(
+      3% 0,
+      97% 4%,
+      100% 90%,
+      92% 100%,
+      5% 96%,
+      0 12%
+    );
+}
+
+.photo-tape::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 6px,
+      rgba(255, 255, 255, 0.12) 6px,
+      rgba(255, 255, 255, 0.12) 8px
+    );
+}
+
+
+/* =========================================================
+   TAPE POSITIONS
+   ========================================================= */
+
+.polaroid-one .photo-tape {
+  left: 28px;
+}
+
+.polaroid-two .photo-tape {
+  right: 25px;
+
+  transform:
+    rotate(4deg);
+}
+
+.polaroid-three .photo-tape {
+  left: 32px;
+
+  transform:
+    rotate(-4deg);
+}
+
+.polaroid-four .photo-tape {
+  right: 27px;
+
+  transform:
+    rotate(3deg);
+}
+
+
+/* =========================================================
+   CAPTION
+   ========================================================= */
+
+.polaroid-caption {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding:
+    14px
+    5px
+    0;
+
+  color: #284b7e;
+
+  font-family:
+    "Segoe Print",
+    "Comic Sans MS",
+    cursive;
+
+  font-size: 14px;
+}
+
+.polaroid-caption .caption-number {
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 12px;
+
+  color: #7c91ad;
+
+  letter-spacing: 1px;
+}
+
+.polaroid-caption .caption-heart {
+  color: #9f1d35;
+
+  font-size: 19px;
+
+  transform:
+    rotate(-8deg);
+}
+
+
+/* =========================================================
+   PAPERCLIP
+   ========================================================= */
+
+.polaroid::before {
+  content: "";
+
+  position: absolute;
+
+  right: -9px;
+  top: -20px;
+
+  width: 18px;
+  height: 48px;
+
+  border:
+    2px solid #71869f;
+
+  border-radius: 10px;
+
+  transform:
+    rotate(7deg);
+
+  z-index: 30;
+
+  opacity: 0.8;
+}
+
+.polaroid-three::before {
+  left: -9px;
+
+  right: auto;
+
+  transform:
+    rotate(-7deg);
+}
+
+
+/* =========================================================
+   FLOWER DECORATION
+   ========================================================= */
+
+.polaroid::after {
+  content: "✿";
+
+  position: absolute;
+
+  color: #e8a7b9;
+
+  font-size: 27px;
+
+  z-index: 25;
+}
+
+.polaroid-one::after {
+  right: -25px;
+  bottom: -18px;
+
+  transform:
+    rotate(12deg);
+}
+
+.polaroid-two::after {
+  left: -24px;
+  bottom: -17px;
+
+  color: #d6b98b;
+
+  transform:
+    rotate(-10deg);
+}
+
+.polaroid-three::after {
+  right: -24px;
+  bottom: -19px;
+
+  color: #e8a7b9;
+
+  transform:
+    rotate(8deg);
+}
+
+.polaroid-four::after {
+  left: -23px;
+  bottom: -18px;
+
+  color: #d6b98b;
+
+  transform:
+    rotate(-8deg);
+}
+
+
+/* =========================================================
+   DOODLES
+   ========================================================= */
+
+.memory-doodle {
+  position: absolute;
+
+  pointer-events: none;
+
+  z-index: 3;
+
+  font-family:
+    "Segoe Print",
+    "Comic Sans MS",
+    cursive;
+}
+
+.doodle-heart-one {
+  left: 7%;
+  top: 35%;
+
+  color: #e8a7b9;
+
+  font-size: 42px;
+
+  transform:
+    rotate(-12deg);
+}
+
+.doodle-heart-two {
+  right: 8%;
+  bottom: 15%;
+
+  color: #f0c4d0;
+
+  font-size: 34px;
+
+  transform:
+    rotate(12deg);
+}
+
+.doodle-star-one {
+  left: 20%;
+  bottom: 12%;
+
+  color: #fff5df;
+
+  font-size: 25px;
+}
+
+.doodle-star-two {
+  right: 21%;
+  top: 34%;
+
+  color: #fff5df;
+
+  font-size: 22px;
+}
+
+.doodle-flower-one {
+  left: 27%;
+  top: 25%;
+
+  color: #e8a7b9;
+
+  font-size: 25px;
+}
+
+.doodle-flower-two {
+  right: 27%;
+  top: 25%;
+
+  color: #d8bd8d;
+
+  font-size: 25px;
+}
+
+
+/* =========================================================
+   BOTTOM HEART
+   ========================================================= */
+
+.music-line-decoration {
+  position: absolute;
+
+  left: 50%;
+  bottom: 24px;
+
+  transform:
+    translateX(-50%);
+
+  color: #f8f4e9;
+
+  font-size: 25px;
+
+  opacity: 0.8;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .vinyl-composition {
+    width: 94vw;
+
+    height: 560px;
+
+    top: 72%;
+  }
+
+  .polaroid {
+    width: 210px;
+  }
+
+  .polaroid-photo {
+    height: 255px;
+  }
+
+  .polaroid-one {
+    left: 2%;
+  }
+
+  .polaroid-two {
+    left: 27%;
+  }
+
+  .polaroid-three {
+    right: 27%;
+  }
+
+  .polaroid-four {
+    right: 2%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .song-memory-room {
+    min-height: 100vh;
+
+    padding:
+      25px
+      15px
+      40px;
+  }
+
+  .memory-heading {
+    top: 78px;
+
+    width: 90%;
+
+    z-index: 100;
+  }
+
+  .memory-heading h1 {
+    font-size: 26px;
+
+    line-height: 1.2;
+  }
+
+  .vinyl-composition {
+    position: relative;
+
+    left: auto;
+    top: auto;
+
+    transform: none;
+
+    width: 100%;
+
+    height: auto;
+
+    margin-top: 185px;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 32px 15px;
+
+    align-items: start;
+  }
+
+  .polaroid {
+    position: relative;
+
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+
+    width: 100%;
+
+    max-width: 210px;
+
+    margin: 0 auto;
+
+    transform:
+      rotate(0deg) !important;
+  }
+
+  .polaroid:hover {
+    transform:
+      translateY(-5px) !important;
+  }
+
+  .polaroid-photo {
+    height: 235px;
+  }
+
+  .polaroid::before {
+    display: none;
+  }
+
+  .doodle-heart-one {
+    left: 4%;
+    top: 40%;
+
+    font-size: 28px;
+  }
+
+  .doodle-heart-two {
+    right: 4%;
+    bottom: 10%;
+
+    font-size: 27px;
+  }
+
+  .doodle-star-one {
+    left: 8%;
+    bottom: 20%;
+  }
+
+  .doodle-star-two {
+    right: 8%;
+    top: 35%;
+  }
+
+  .doodle-flower-one {
+    left: 10%;
+    top: 20%;
+  }
+
+  .doodle-flower-two {
+    right: 10%;
+    top: 20%;
+  }
+
+  .memory-back-button {
+    top: 20px;
+    left: 18px;
+
+    font-size: 14px;
+
+    padding:
+      9px
+      15px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .vinyl-composition {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    margin-top: 175px;
+  }
+
+  .polaroid {
+    max-width: 260px;
+  }
+
+  .polaroid-photo {
+    height: 290px;
+  }
+
+  .memory-heading h1 {
+    font-size: 23px;
+  }
+}

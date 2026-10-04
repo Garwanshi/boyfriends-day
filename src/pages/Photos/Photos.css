@@ -1,0 +1,761 @@
+/* =========================================================
+   PHOTOS PAGE
+   LOCKED PROFESSIONAL SCRAPBOOK COLLAGE
+   ========================================================= */
+
+.photos-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  padding: 35px 28px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+background: #587bad;}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.photos-back-button {
+  position: absolute;
+  top: 20px;
+  left: 22px;
+
+  z-index: 100;
+
+  padding: 7px 13px;
+
+  border: 1.5px solid #dcecf2;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  color: #284b7e;
+
+  font-family:
+    "Comic Sans MS",
+    "Segoe Print",
+    cursive;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.20);
+
+  transform: rotate(-2deg);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.photos-back-button:hover {
+  transform:
+    rotate(-2deg)
+    translateY(-2px);
+
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+.photos-back-button:active {
+  transform: rotate(-2deg);
+}
+
+.photos-back-button:focus-visible {
+  outline: 2px dashed #ffffff;
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   COLLAGE AREA
+   ========================================================= */
+
+.photos-collage-section {
+  position: relative;
+
+  width: min(1080px, 100%);
+  min-height: 720px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: transparent;
+}
+
+
+/* =========================================================
+   COLLAGE CANVAS
+   ========================================================= */
+
+.photo-grid {
+  position: relative;
+
+  width: 900px;
+  height: 680px;
+
+  margin: auto;
+}
+
+
+/* =========================================================
+   INDIVIDUAL PHOTO
+   Professional / clean / completely straight
+   ========================================================= */
+
+.grid-photo {
+  position: absolute;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background: #f8f1e7;
+
+  border: 2px solid #fffaf0;
+
+  box-shadow:
+    0 3px 7px rgba(0, 0, 0, 0.20);
+
+  z-index: 5;
+}
+
+.grid-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border: none;
+  outline: none;
+
+  filter: saturate(0.96);
+}
+
+
+/* =========================================================
+   PHOTO POSITIONS
+   Locked layout
+   Equal 10px spacing
+   ========================================================= */
+
+
+/* =========================================================
+   TOP ROW
+   ========================================================= */
+
+.photo-1 {
+  left: 115px;
+  top: 20px;
+
+  width: 105px;
+  height: 105px;
+}
+
+.photo-2 {
+  left: 230px;
+  top: 20px;
+
+  width: 105px;
+  height: 105px;
+}
+
+
+/* =========================================================
+   TOP RIGHT LARGE
+   ========================================================= */
+
+.photo-3 {
+  left: 460px;
+  top: 20px;
+
+  width: 220px;
+  height: 220px;
+}
+
+
+/* =========================================================
+   LEFT SIDE
+   ========================================================= */
+
+.photo-4 {
+  left: 0;
+  top: 135px;
+
+  width: 105px;
+  height: 105px;
+}
+
+.photo-5 {
+  left: 0;
+  top: 250px;
+
+  width: 105px;
+  height: 105px;
+}
+
+
+/* =========================================================
+   LARGE CENTRE-LEFT
+   ========================================================= */
+
+.photo-6 {
+  left: 115px;
+  top: 135px;
+
+  width: 220px;
+  height: 220px;
+}
+
+
+/* =========================================================
+   CENTRE SMALL PHOTOS
+   ========================================================= */
+
+.photo-7 {
+  left: 345px;
+  top: 135px;
+
+  width: 105px;
+  height: 105px;
+}
+
+.photo-8 {
+  left: 345px;
+  top: 250px;
+
+  width: 105px;
+  height: 105px;
+}
+
+
+/* =========================================================
+   RIGHT SIDE SMALL PHOTOS
+   ========================================================= */
+
+.photo-9 {
+  left: 690px;
+  top: 135px;
+
+  width: 105px;
+  height: 105px;
+}
+
+.photo-10 {
+  left: 690px;
+  top: 250px;
+
+  width: 105px;
+  height: 105px;
+}
+
+
+/* =========================================================
+   LOWER LEFT SMALL
+   ========================================================= */
+
+.photo-11 {
+  left: 115px;
+  top: 365px;
+
+  width: 105px;
+  height: 105px;
+}
+
+
+/* =========================================================
+   LOWER CENTRE LARGE
+   ========================================================= */
+
+.photo-12 {
+  left: 230px;
+  top: 365px;
+
+  width: 220px;
+  height: 220px;
+}
+
+
+/* =========================================================
+   LOWER RIGHT LARGE
+   ========================================================= */
+
+.photo-13 {
+  left: 460px;
+  top: 250px;
+
+  width: 220px;
+  height: 220px;
+}
+
+
+/* =========================================================
+   LOWER RIGHT SMALL
+   ========================================================= */
+
+.photo-14 {
+  left: 460px;
+  top: 480px;
+
+  width: 105px;
+  height: 105px;
+}
+
+
+/* =========================================================
+   BOTTOM SMALL
+   ========================================================= */
+
+.photo-15 {
+  left: 345px;
+  top: 595px;
+
+  width: 105px;
+  height: 105px;
+}
+
+
+/* =========================================================
+   DECORATIVE HEARTS
+   ========================================================= */
+
+.collage-heart {
+  position: absolute;
+
+  color: #f5eee4;
+
+  font-family: Georgia, serif;
+
+  line-height: 1;
+
+  z-index: 80;
+
+  pointer-events: none;
+}
+
+.heart-one {
+  left: -20px;
+  top: 100px;
+
+  font-size: 42px;
+
+  transform: rotate(-12deg);
+}
+
+.heart-two {
+  right: -20px;
+  top: 125px;
+
+  font-size: 44px;
+
+  transform: rotate(13deg);
+}
+
+
+/* =========================================================
+   STARS
+   ========================================================= */
+
+.collage-star {
+  position: absolute;
+
+  color: #f5eee4;
+
+  z-index: 80;
+
+  pointer-events: none;
+
+  line-height: 1;
+}
+
+.star-one {
+  left: 20px;
+  bottom: 80px;
+
+  font-size: 34px;
+
+  transform: rotate(-10deg);
+}
+
+.star-two {
+  right: 24px;
+  bottom: 92px;
+
+  font-size: 28px;
+
+  transform: rotate(12deg);
+}
+
+.star-three {
+  left: 50%;
+  bottom: -18px;
+
+  font-size: 25px;
+}
+
+
+/* =========================================================
+   DOODLE LINES
+   ========================================================= */
+
+.doodle-line {
+  position: absolute;
+
+  display: block;
+
+  width: 62px;
+  height: 20px;
+
+  border-top:
+    2px solid rgba(245, 238, 228, 0.85);
+
+  border-radius: 50%;
+
+  z-index: 80;
+
+  pointer-events: none;
+}
+
+.line-one {
+  left: -7px;
+  top: 75px;
+
+  transform: rotate(-13deg);
+}
+
+.line-two {
+  right: -5px;
+  top: 93px;
+
+  transform: rotate(14deg);
+}
+
+.line-three {
+  left: 50%;
+  bottom: 8px;
+
+  width: 95px;
+
+  transform: rotate(3deg);
+}
+
+
+/* =========================================================
+   BLUE WASHI TAPE
+   ========================================================= */
+
+.washi-tape {
+  position: absolute;
+
+  display: block;
+
+  width: 82px;
+  height: 20px;
+
+  background:
+    rgba(104, 165, 199, 0.82);
+
+  opacity: 0.78;
+
+  z-index: 90;
+
+  box-shadow:
+    0 1px 2px rgba(43, 79, 105, 0.12);
+}
+
+.washi-top-left {
+  top: 24px;
+  left: 125px;
+
+  transform: rotate(-7deg);
+}
+
+.washi-bottom-right {
+  right: 125px;
+  bottom: 23px;
+
+  transform: rotate(7deg);
+}
+
+
+/* =========================================================
+   PAPERCLIP
+   ========================================================= */
+
+.paperclip-doodle {
+  position: absolute;
+
+  width: 40px;
+  height: 58px;
+
+  color: #eef6f8;
+
+  z-index: 90;
+}
+
+.paperclip-top {
+  top: 40px;
+  right: 135px;
+
+  transform: rotate(13deg);
+}
+
+
+/* =========================================================
+   HEART DOODLES
+   ========================================================= */
+
+.heart-doodle {
+  position: absolute;
+
+  width: 52px;
+  height: 52px;
+
+  color: #f1d8df;
+
+  z-index: 90;
+
+  pointer-events: none;
+}
+
+.heart-top {
+  top: 70px;
+  left: 220px;
+
+  transform: rotate(-10deg);
+}
+
+.heart-right {
+  right: 195px;
+  bottom: 72px;
+
+  transform: rotate(11deg);
+}
+
+
+/* =========================================================
+   SPARKLES
+   ========================================================= */
+
+.sparkle-doodle {
+  position: absolute;
+
+  width: 38px;
+  height: 38px;
+
+  color: #f5eee4;
+
+  z-index: 90;
+
+  pointer-events: none;
+}
+
+.sparkle-top {
+  top: 85px;
+  right: 240px;
+
+  transform: rotate(12deg);
+}
+
+.sparkle-bottom {
+  bottom: 55px;
+  left: 220px;
+
+  transform: rotate(-12deg);
+}
+
+
+/* =========================================================
+   TULIPS
+   ========================================================= */
+
+.tulip-doodle {
+  position: absolute;
+
+  width: 49px;
+  height: 64px;
+
+  color: #dcecf0;
+
+  z-index: 90;
+
+  pointer-events: none;
+}
+
+.tulip-left {
+  left: 92px;
+  bottom: 54px;
+
+  transform: rotate(-8deg);
+}
+
+.tulip-right {
+  right: 92px;
+  top: 300px;
+
+  transform:
+    rotate(8deg)
+    scaleX(-1);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .photos-page {
+    padding: 30px 16px;
+  }
+
+  .photos-collage-section {
+    min-height: 700px;
+  }
+
+  .photo-grid {
+    transform: scale(0.88);
+    transform-origin: center center;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .photos-page {
+    min-height: 100vh;
+
+    padding:
+      60px 8px 25px;
+
+    align-items: center;
+  }
+
+  .photos-collage-section {
+    width: 100%;
+
+    min-height: 680px;
+
+    overflow: visible;
+  }
+
+  .photo-grid {
+    width: 900px;
+    height: 680px;
+
+    transform: scale(0.67);
+
+    transform-origin: center center;
+
+    flex-shrink: 0;
+  }
+
+  .photos-back-button {
+    top: 13px;
+    left: 13px;
+
+    padding:
+      6px 11px;
+
+    font-size: 13px;
+  }
+
+  .washi-top-left {
+    left: 90px;
+  }
+
+  .washi-bottom-right {
+    right: 80px;
+  }
+
+  .paperclip-top {
+    right: 85px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 500px) {
+  .photos-page {
+    padding:
+      55px 4px 20px;
+  }
+
+  .photos-collage-section {
+    min-height: 620px;
+  }
+
+  .photo-grid {
+    transform: scale(0.55);
+  }
+
+  .washi-top-left {
+    left: 65px;
+  }
+
+  .washi-bottom-right {
+    right: 55px;
+  }
+
+  .heart-top {
+    left: 105px;
+  }
+
+  .heart-right {
+    right: 90px;
+  }
+
+  .tulip-left {
+    left: 35px;
+  }
+
+  .tulip-right {
+    right: 35px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .photo-grid {
+    transform: scale(0.48);
+  }
+
+  .photos-collage-section {
+    min-height: 560px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .photos-back-button {
+    transition: none;
+  }
+}

@@ -1,0 +1,989 @@
+/* =========================================
+   NEW COVER — BOYFRIEND'S DAY V2
+   ========================================= */
+
+.new-cover {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 55px 35px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7898c9 0%,
+      #6689bd 45%,
+      #587bad 100%
+    );
+
+  color: #17294b;
+}
+
+
+/* =========================================
+   SUBTLE DENIM TEXTURE
+   ========================================= */
+
+.new-cover::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.12;
+
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(255,255,255,0.18) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 4px,
+      rgba(20,45,80,0.12) 5px
+    );
+}
+
+
+/* =========================================
+   TOP NOTE
+   ========================================= */
+
+.cover-top-note {
+  position: absolute;
+
+  top: 25px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 10;
+
+  color: #fffaf0;
+
+  font-family:
+    "Comic Sans MS",
+    "Segoe Print",
+    cursive;
+
+  font-size: 13px;
+
+  letter-spacing: 0.08em;
+
+  transform:
+    translateX(-50%)
+    rotate(-2deg);
+}
+
+
+/* =========================================
+   MAIN CARD
+   ========================================= */
+
+.cover-card {
+  position: relative;
+
+  z-index: 5;
+
+  width: min(1080px, 94vw);
+
+  min-height: 650px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 0.95fr;
+
+  overflow: hidden;
+
+  background: #f8f4e9;
+
+  border:
+    4px solid
+    rgba(25, 52, 91, 0.82);
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 25px 55px
+    rgba(19, 38, 70, 0.28);
+
+  transform: rotate(-0.5deg);
+}
+
+
+/* =========================================
+   INNER GRID PAPER
+   ========================================= */
+
+.cover-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.38;
+
+  background-image:
+    linear-gradient(
+      rgba(90, 110, 145, 0.10) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(90, 110, 145, 0.10) 1px,
+      transparent 1px
+    );
+
+  background-size: 24px 24px;
+}
+
+
+/* =========================================
+   TAPE
+   ========================================= */
+
+.cover-tape {
+  position: absolute;
+
+  z-index: 20;
+
+  top: -18px;
+  left: 50%;
+
+  width: 145px;
+  height: 38px;
+
+  transform:
+    translateX(-50%)
+    rotate(2deg);
+
+  background:
+    rgba(91, 127, 183, 0.82);
+
+  box-shadow:
+    0 3px 7px
+    rgba(25, 52, 91, 0.14);
+}
+
+
+/* =========================================
+   LEFT SIDE
+   ========================================= */
+
+.cover-left {
+  position: relative;
+
+  z-index: 4;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding:
+    70px
+    55px
+    60px;
+}
+
+
+/* =========================================
+   SMALL TEXT
+   ========================================= */
+
+.cover-small-text {
+  display: block;
+
+  margin-bottom: 17px;
+
+  color: #526889;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.22em;
+}
+
+
+/* =========================================
+   MAIN TITLE
+   ========================================= */
+
+.cover-main-title {
+  margin: 0;
+
+  color: #1e3157;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(55px, 7vw, 92px);
+
+  line-height: 0.84;
+
+  letter-spacing: -0.055em;
+
+  font-weight: 900;
+
+  text-shadow:
+    2px 2px 0 #d9e0ea;
+}
+
+
+/* =========================================
+   TITLE HEART
+   ========================================= */
+
+.cover-title-heart {
+  margin-top: 17px;
+
+  color: #5279b4;
+
+  font-size: 27px;
+
+  transform:
+    rotate(-12deg);
+}
+
+
+/* =========================================
+   MESSAGE
+   ========================================= */
+
+.cover-message {
+  margin:
+    23px
+    0
+    30px;
+
+  color: #53627a;
+
+  font-family:
+    "Comic Sans MS",
+    "Segoe Print",
+    cursive;
+
+  font-size: 16px;
+
+  line-height: 1.45;
+
+  transform:
+    rotate(-1.5deg);
+}
+
+
+/* =========================================
+   CONTINUE BUTTON
+   ========================================= */
+
+.cover-continue {
+  width: fit-content;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+
+  padding:
+    13px
+    22px;
+
+  border:
+    2px solid
+    #1f3967;
+
+  border-radius: 999px;
+
+  background: #e8edf3;
+
+  color: #1f3967;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.13em;
+
+  box-shadow:
+    4px 5px 0
+    #1f3967;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.cover-continue span {
+  font-size: 15px;
+}
+
+.cover-continue:hover {
+  background: #ffffff;
+
+  transform:
+    translateY(-3px)
+    rotate(-1deg);
+
+  box-shadow:
+    4px 8px 0
+    #1f3967;
+}
+
+.cover-continue:active {
+  transform:
+    translateY(2px);
+
+  box-shadow:
+    2px 3px 0
+    #1f3967;
+}
+
+
+/* =========================================
+   RIGHT SIDE
+   ========================================= */
+
+.cover-right {
+  position: relative;
+
+  z-index: 4;
+
+  min-height: 650px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* =========================================
+   PHOTO FRAME
+   ========================================= */
+
+.photo-frame {
+  position: relative;
+
+  width: min(340px, 70%);
+
+  aspect-ratio: 0.78;
+
+  padding: 15px;
+
+  background: #fffdf7;
+
+  border:
+    2px solid
+    #d5d8d9;
+
+  box-shadow:
+    12px 15px 0
+    rgba(37, 62, 102, 0.20);
+
+  transform:
+    rotate(4deg);
+
+  transition:
+    transform 0.3s ease;
+}
+
+.photo-frame:hover {
+  transform:
+    rotate(1deg)
+    scale(1.02);
+}
+
+
+/* =========================================
+   PHOTO INSIDE
+   ========================================= */
+
+.photo-inner {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #b9cbe3,
+      #d9e3ee
+    );
+
+  border:
+    2px dashed
+    #6f8fb9;
+
+  color: #294b7b;
+
+  text-align: center;
+}
+
+
+.photo-placeholder-icon {
+  font-size: 55px;
+
+  line-height: 1;
+
+  transform:
+    rotate(-8deg);
+}
+
+
+.photo-inner span {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.2em;
+}
+
+
+.photo-inner small {
+  font-family:
+    "Comic Sans MS",
+    "Segoe Print",
+    cursive;
+
+  font-size: 14px;
+
+  opacity: 0.75;
+}
+
+
+/* =========================================
+   HANDWRITTEN NOTES
+   ========================================= */
+
+.cover-note {
+  position: absolute;
+
+  color: #243e6a;
+
+  font-family:
+    "Comic Sans MS",
+    "Segoe Print",
+    cursive;
+
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  z-index: 10;
+}
+
+
+.note-one {
+  top: 19%;
+
+  right: 5%;
+
+  font-size: 18px;
+
+  transform:
+    rotate(8deg);
+}
+
+
+.note-two {
+  bottom: 19%;
+
+  left: 3%;
+
+  font-size: 17px;
+
+  transform:
+    rotate(-7deg);
+}
+
+
+/* =========================================
+   CAMERA DOODLE
+   ========================================= */
+
+.camera-doodle {
+  position: absolute;
+
+  right: 9%;
+
+  bottom: 9%;
+
+  width: 70px;
+
+  height: 48px;
+
+  transform:
+    rotate(-12deg);
+}
+
+
+.camera-body {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+
+  width: 68px;
+  height: 40px;
+
+  border:
+    3px solid
+    #284b7e;
+
+  border-radius: 9px;
+
+  background: #d9e2ed;
+}
+
+
+.camera-lens {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 24px;
+  height: 24px;
+
+  transform:
+    translate(-50%, -50%);
+
+  border:
+    4px solid
+    #284b7e;
+
+  border-radius: 50%;
+
+  background: #91a9c8;
+}
+
+
+.camera-flash {
+  position: absolute;
+
+  top: -7px;
+  left: 10px;
+
+  width: 24px;
+  height: 11px;
+
+  border:
+    3px solid
+    #284b7e;
+
+  border-bottom: none;
+
+  border-radius:
+    5px
+    5px
+    0
+    0;
+
+  background: #d9e2ed;
+}
+
+
+/* =========================================
+   STARS
+   ========================================= */
+
+.cover-star,
+.cover-heart,
+.cover-sparkle {
+  position: absolute;
+
+  z-index: 3;
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+
+.cover-star {
+  color: #e9f0fa;
+
+  font-size: 42px;
+
+  text-shadow:
+    2px 3px 0
+    rgba(32, 59, 101, 0.25);
+}
+
+
+.cover-star-1 {
+  top: 13%;
+
+  left: 8%;
+
+  transform:
+    rotate(-12deg);
+}
+
+
+.cover-star-2 {
+  right: 7%;
+
+  top: 19%;
+
+  font-size: 60px;
+
+  transform:
+    rotate(15deg);
+}
+
+
+.cover-star-3 {
+  bottom: 13%;
+
+  left: 7%;
+
+  font-size: 30px;
+}
+
+
+/* =========================================
+   HEARTS
+   ========================================= */
+
+.cover-heart {
+  color: #e9eff8;
+
+  text-shadow:
+    2px 3px 0
+    rgba(32, 59, 101, 0.20);
+}
+
+
+.cover-heart-1 {
+  top: 8%;
+
+  right: 19%;
+
+  font-size: 38px;
+
+  transform:
+    rotate(12deg);
+}
+
+
+.cover-heart-2 {
+  bottom: 10%;
+
+  right: 9%;
+
+  font-size: 35px;
+
+  transform:
+    rotate(-12deg);
+}
+
+
+/* =========================================
+   SPARKLES
+   ========================================= */
+
+.cover-sparkle {
+  color: #f7f0da;
+
+  font-size: 25px;
+}
+
+
+.sparkle-1 {
+  top: 32%;
+
+  left: 4%;
+}
+
+
+.sparkle-2 {
+  bottom: 26%;
+
+  right: 3%;
+}
+
+
+/* =========================================
+   BOTTOM NOTE
+   ========================================= */
+
+.cover-bottom-note {
+  position: absolute;
+
+  bottom: 20px;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%)
+    rotate(1deg);
+
+  z-index: 10;
+
+  color: #f8f4e9;
+
+  font-family:
+    "Comic Sans MS",
+    "Segoe Print",
+    cursive;
+
+  font-size: 13px;
+
+  white-space: nowrap;
+}
+
+
+.cover-bottom-note span {
+  font-weight: 800;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 850px) {
+
+  .new-cover {
+    padding:
+      70px
+      20px
+      55px;
+  }
+
+
+  .cover-card {
+    grid-template-columns: 1fr;
+
+    width: min(600px, 94vw);
+
+    min-height: auto;
+  }
+
+
+  .cover-left {
+    padding:
+      55px
+      45px
+      35px;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+
+  .cover-main-title {
+    font-size:
+      clamp(54px, 13vw, 82px);
+  }
+
+
+  .cover-right {
+    min-height: 470px;
+
+    padding-bottom: 40px;
+  }
+
+
+  .photo-frame {
+    width: min(300px, 65%);
+  }
+
+
+  .note-one {
+    right: 12%;
+  }
+
+
+  .note-two {
+    left: 12%;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 520px) {
+
+  .new-cover {
+    min-height: 100svh;
+
+    padding:
+      65px
+      12px
+      50px;
+  }
+
+
+  .cover-top-note {
+    top: 20px;
+
+    font-size: 11px;
+  }
+
+
+  .cover-card {
+    width: 94vw;
+
+    border-width: 3px;
+  }
+
+
+  .cover-left {
+    padding:
+      48px
+      24px
+      25px;
+  }
+
+
+  .cover-small-text {
+    font-size: 9px;
+
+    letter-spacing: 0.15em;
+  }
+
+
+  .cover-main-title {
+    font-size:
+      clamp(48px, 14vw, 68px);
+
+    line-height: 0.88;
+  }
+
+
+  .cover-message {
+    font-size: 14px;
+
+    margin-bottom: 25px;
+  }
+
+
+  .cover-right {
+    min-height: 390px;
+  }
+
+
+  .photo-frame {
+    width: min(250px, 68%);
+  }
+
+
+  .note-one {
+    top: 13%;
+
+    right: 5%;
+
+    font-size: 14px;
+  }
+
+
+  .note-two {
+    bottom: 14%;
+
+    left: 5%;
+
+    font-size: 14px;
+  }
+
+
+  .camera-doodle {
+    right: 5%;
+
+    bottom: 7%;
+
+    transform:
+      scale(0.75)
+      rotate(-12deg);
+  }
+
+
+  .cover-star-1 {
+    left: 3%;
+  }
+
+
+  .cover-star-2 {
+    right: 2%;
+
+    font-size: 45px;
+  }
+
+
+  .cover-heart-1 {
+    right: 7%;
+  }
+
+
+  .cover-bottom-note {
+    bottom: 17px;
+
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .photo-frame,
+  .cover-continue {
+    transition: none;
+  }
+
+}

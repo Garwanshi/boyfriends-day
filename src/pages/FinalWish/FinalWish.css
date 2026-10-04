@@ -1,0 +1,1200 @@
+/* =========================================================
+   FINAL WISH — CLEAN HERO COMPOSITION
+   ========================================================= */
+
+.final-wish-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    #7898c9 0%,
+    #6689bd 45%,
+    #587bad 100%
+  );
+
+  color: #f3b7c8;
+}
+
+
+/* =========================================================
+   LEFT PHOTO
+   ========================================================= */
+
+.final-wish-background {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 42%;
+  height: 100%;
+
+  background-image: url("/images/final-wish/final-wish-bg.jpg");
+
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+
+  z-index: 0;
+}
+
+
+/* =========================================================
+   PHOTO → BLUE TRANSITION
+   ========================================================= */
+
+.final-wish-page::after {
+  content: "";
+
+  position: absolute;
+
+  left: 36%;
+  top: 0;
+
+  width: 12%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    rgba(88, 123, 173, 0),
+    rgba(88, 123, 173, 0.75),
+    #587bad
+  );
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.final-wish-back {
+  position: absolute;
+
+  top: 24px;
+  left: 24px;
+
+  z-index: 50;
+
+  padding: 10px 18px;
+
+  border: none;
+  border-radius: 24px;
+
+  background: #f8f5ee;
+
+  color: #587bad;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 14px rgba(30, 48, 78, 0.18);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.final-wish-back:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(30, 48, 78, 0.22);
+}
+
+
+/* =========================================================
+   MAIN HERO AREA
+   ========================================================= */
+
+.final-wish-content {
+  position: absolute;
+
+  left: 43%;
+  top: 50%;
+
+  width: 52%;
+
+  transform: translateY(-50%);
+
+  text-align: center;
+
+  z-index: 20;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* =========================================================
+   SMALL INTRO
+   ========================================================= */
+
+.final-wish-eyebrow {
+  margin: 0 0 22px;
+
+  font-family:
+    "Brush Script MT",
+    "Segoe Script",
+    "Lucida Handwriting",
+    cursive;
+
+  font-size: clamp(20px, 2vw, 30px);
+
+  font-weight: 500;
+
+  color: #f2b5c6;
+
+  letter-spacing: 1px;
+
+  text-shadow:
+    0 2px 5px rgba(67, 47, 65, 0.18);
+
+  opacity: 0;
+
+  animation:
+    heroEyebrow
+    0.8s
+    ease-out
+    0.3s
+    forwards;
+}
+
+
+/* =========================================================
+   ⭐ MAIN TITLE
+   ========================================================= */
+
+.final-wish-title {
+  margin: 0;
+
+  font-family:
+    /* "Brush Script MT", */
+    "Segoe Script",
+    /* "Lucida Handwriting", */
+    cursive;
+
+  font-size: clamp(38px, 4.2vw, 64px);
+
+  font-weight: 400;
+
+  line-height: 1.4;
+
+  letter-spacing: 1px;
+
+  color: #f3b7c8;
+
+  text-align: center;
+
+  text-shadow:
+    0 3px 0 rgba(255, 221, 229, 0.18),
+    0 8px 18px rgba(60, 48, 72, 0.18);
+
+  opacity: 0;
+
+  animation:
+    heroTitle
+    1s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    0.65s
+    forwards;
+}
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.title-divider {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 13px;
+
+  margin-top: 28px;
+
+  opacity: 0;
+
+  animation:
+    heroDivider
+    0.7s
+    ease-out
+    1.45s
+    forwards;
+}
+
+.title-divider span {
+  color: #f2aabd;
+
+  font-size: 19px;
+}
+
+.title-divider i {
+  display: block;
+
+  width: 48px;
+  height: 1px;
+
+  background: rgba(244, 184, 199, 0.75);
+}
+
+
+/* =========================================================
+   GOLDEN SPARKLES
+   ========================================================= */
+
+.golden-sparkle {
+  position: absolute;
+
+  z-index: 25;
+
+  color: #f4ca5b;
+
+  font-family: Georgia, serif;
+
+  text-shadow:
+    0 0 10px rgba(255, 221, 112, 0.65);
+
+  opacity: 0;
+
+  animation:
+    sparkleAppear
+    0.7s
+    ease-out
+    forwards,
+    sparkleFloat
+    4s
+    ease-in-out
+    1s
+    infinite;
+}
+
+
+/* ---------------------------------------------------------
+   Around hero — intentionally placed
+   --------------------------------------------------------- */
+
+.sparkle-left-one {
+  left: 39%;
+  top: 32%;
+
+  font-size: 19px;
+
+  animation-delay: 1.9s, 2.6s;
+}
+
+.sparkle-left-two {
+  left: 47%;
+  bottom: 22%;
+
+  font-size: 15px;
+
+  animation-delay: 2.5s, 3.2s;
+}
+
+.sparkle-top-one {
+  left: 62%;
+  top: 18%;
+
+  font-size: 17px;
+
+  animation-delay: 1.7s, 2.4s;
+}
+
+.sparkle-main-one {
+  left: 51%;
+  top: 32%;
+
+  font-size: 14px;
+
+  animation-delay: 2.1s, 2.8s;
+}
+
+.sparkle-main-two {
+  right: 14%;
+  top: 42%;
+
+  font-size: 22px;
+
+  animation-delay: 2.3s, 3s;
+}
+
+.sparkle-main-three {
+  right: 17%;
+  bottom: 25%;
+
+  font-size: 15px;
+
+  animation-delay: 2.8s, 3.5s;
+}
+
+.sparkle-right-one {
+  right: 5%;
+  top: 54%;
+
+  font-size: 16px;
+
+  animation-delay: 2.4s, 3.1s;
+}
+
+.sparkle-right-two {
+  right: 25%;
+  top: 27%;
+
+  font-size: 13px;
+
+  animation-delay: 2.7s, 3.4s;
+}
+
+.sparkle-bottom-one {
+  left: 58%;
+  bottom: 8%;
+
+  font-size: 19px;
+
+  animation-delay: 3s, 3.7s;
+}
+
+
+/* =========================================================
+   HEART STICKERS
+   ========================================================= */
+
+.heart-sticker {
+  position: absolute;
+
+  z-index: 10;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #f1aabc;
+
+  opacity: 0;
+
+  animation:
+    stickerAppear
+    0.8s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+}
+
+.heart-sticker span:nth-child(1) {
+  font-size: 15px;
+}
+
+.heart-sticker span:nth-child(2) {
+  font-size: 22px;
+}
+
+.heart-sticker span:nth-child(3) {
+  font-size: 12px;
+}
+
+
+/* ---------------------------------------------------------
+   Left
+   --------------------------------------------------------- */
+
+.sticker-left-hearts {
+  left: 4%;
+  bottom: 13%;
+
+  transform: rotate(-5deg);
+
+  animation-delay: 2.2s;
+}
+
+
+/* ---------------------------------------------------------
+   Top right
+   --------------------------------------------------------- */
+
+.sticker-top-right-hearts {
+  right: 4%;
+  top: 25%;
+
+  transform: rotate(5deg);
+
+  animation-delay: 1.9s;
+}
+
+
+/* ---------------------------------------------------------
+   Right middle
+   --------------------------------------------------------- */
+
+.sticker-right-hearts {
+  right: 4%;
+  top: 65%;
+
+  transform: rotate(-4deg);
+
+  animation-delay: 2.7s;
+}
+
+
+/* ---------------------------------------------------------
+   Bottom left of blue area
+   --------------------------------------------------------- */
+
+.sticker-bottom-hearts {
+  left: 39%;
+  bottom: 6%;
+
+  transform: rotate(3deg);
+
+  animation-delay: 3.1s;
+}
+
+
+/* =========================================================
+   SMALL PAPER NOTES
+   ========================================================= */
+
+.top-note,
+.top-right-note,
+.left-mini-note,
+.right-note {
+  position: absolute;
+
+  z-index: 15;
+
+  background: #f8e7ec;
+
+  color: #c9859a;
+
+  font-family:
+    "Brush Script MT",
+    "Segoe Script",
+    "Lucida Handwriting",
+    cursive;
+
+  font-size: 24px;
+
+  line-height: 1.12;
+
+  text-align: center;
+
+  box-shadow:
+    0 7px 16px rgba(50, 48, 65, 0.13);
+
+  opacity: 0;
+}
+
+
+/* =========================================================
+   TOP LEFT NOTE
+   ========================================================= */
+
+.top-note {
+  left: 40%;
+  top: 8%;
+
+  width: 165px;
+
+  padding: 12px 14px;
+
+  transform: rotate(2deg);
+
+  animation:
+    noteAppear
+    0.8s
+    ease-out
+    1.2s
+    forwards;
+}
+
+
+/* =========================================================
+   TOP RIGHT NOTE
+   ========================================================= */
+
+.top-right-note {
+  right: 9%;
+  top: 10%;
+
+  width: 175px;
+
+  padding: 5px 10px;
+
+  transform: rotate(-3deg);
+
+  animation:
+    noteAppear
+    0.8s
+    ease-out
+    1.45s
+    forwards;
+}
+
+
+/* =========================================================
+   LEFT PHOTO NOTES
+   ========================================================= */
+
+.left-mini-note {
+  left: 7%;
+  bottom: 23%;
+
+  padding: 10px 17px;
+
+  transform: rotate(-3deg);
+
+  animation:
+    noteAppear
+    0.8s
+    ease-out
+    1.8s
+    forwards;
+}
+
+.lucky-note {
+  left: 17%;
+  bottom: 10%;
+
+  transform: rotate(3deg);
+
+  animation-delay: 2.1s;
+}
+
+
+/* =========================================================
+   RIGHT NOTES
+   ========================================================= */
+
+.right-note {
+  width: 180px;
+
+  padding: 10px 16px;
+}
+
+
+/* ---------------------------------------------------------
+   You're stuck with me
+   --------------------------------------------------------- */
+
+.right-note-one {
+  right: 6%;
+  bottom: 24%;
+
+  transform: rotate(3deg);
+
+  animation:
+    noteAppear
+    0.8s
+    ease-out
+    2.4s
+    forwards;
+}
+
+
+/* ---------------------------------------------------------
+   Shining star
+   --------------------------------------------------------- */
+
+.right-note-two {
+  right: 25%;
+  bottom: 8%;
+
+  transform: rotate(-2deg);
+
+  animation:
+    noteAppear
+    0.8s
+    ease-out
+    2.7s
+    forwards;
+}
+
+.right-note-two span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #e4b93e;
+}
+
+
+/* ---------------------------------------------------------
+   Glad I found you
+   --------------------------------------------------------- */
+
+.right-note-three {
+  right: 0.5%;
+  top: 35%;
+
+  transform: rotate(-3deg);
+
+  animation:
+    noteAppear
+    0.8s
+    ease-out
+    3s
+    forwards;
+}
+
+
+/* =========================================================
+   FLOWER
+   ========================================================= */
+/* 
+.flower-sticker {
+  position: absolute;
+
+  right: 1%;
+  bottom: 1%;
+
+  width: 100px;
+  height: 155px;
+
+  z-index: 12;
+
+  opacity: 0;
+
+  transform: rotate(3deg);
+
+  animation:
+    flowerAppear
+    1s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    3.15s
+    forwards;
+}
+
+.flower-head {
+  position: absolute;
+
+  left: 28px;
+  top: 0;
+
+  font-size: 53px;
+}
+
+.flower-stem {
+  position: absolute;
+
+  left: 52px;
+  top: 48px;
+
+  width: 3px;
+  height: 100px;
+
+  background: #9eb89f;
+
+  border-radius: 10px;
+}
+
+.flower-leaf {
+  position: absolute;
+
+  width: 32px;
+  height: 12px;
+
+  border: 3px solid #9eb89f;
+
+  border-top: none;
+  border-right: none;
+
+  border-radius: 50%;
+}
+
+.flower-leaf-left {
+  left: 20px;
+  top: 87px;
+
+  transform: rotate(15deg);
+}
+
+.flower-leaf-right {
+  left: 53px;
+  top: 105px;
+
+  transform: rotate(-20deg);
+} */
+
+
+/* =========================================================
+   PINK TAPE
+   ========================================================= */
+
+.tape-sticker {
+  position: absolute;
+
+  z-index: 8;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  opacity: 0;
+
+  animation:
+    tapeAppear
+    0.8s
+    ease-out
+    forwards;
+}
+
+.tape-sticker span {
+  display: block;
+
+  width: 65px;
+  height: 9px;
+
+  background: rgba(244, 171, 189, 0.72);
+
+  clip-path: polygon(
+    0 20%,
+    8% 0,
+    100% 7%,
+    94% 100%,
+    5% 86%
+  );
+}
+
+.tape-left-top {
+  left: 28%;
+  top: 7%;
+
+  transform: rotate(-7deg);
+
+  animation-delay: 1.5s;
+}
+
+.tape-top-right {
+  right: 28%;
+  top: 5%;
+
+  transform: rotate(-8deg);
+
+  animation-delay: 1.7s;
+}
+
+.tape-bottom {
+  left: 62%;
+  bottom: 5%;
+
+  transform: rotate(-5deg);
+
+  animation-delay: 3s;
+}
+
+
+/* =========================================================
+   SIGNATURE
+   ========================================================= */
+
+.bottom-signature {
+  position: absolute;
+
+  right: 3%;
+  bottom: 3%;
+
+  z-index: 20;
+
+  margin: 0;
+
+  font-family:
+    "Brush Script MT",
+    "Segoe Script",
+    cursive;
+
+  font-size: 24px;
+
+  color: #f2b5c6;
+
+  opacity: 0;
+
+  animation:
+    signatureAppear
+    0.8s
+    ease-out
+    3.4s
+    forwards;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes heroEyebrow {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes heroTitle {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(35px)
+      scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+@keyframes heroDivider {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+
+@keyframes noteAppear {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px)
+      scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes stickerAppear {
+  from {
+    opacity: 0;
+
+    transform:
+      scale(0.4)
+      rotate(-15deg);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes flowerAppear {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(30px)
+      rotate(12deg)
+      scale(0.75);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      rotate(3deg)
+      scale(1);
+  }
+}
+
+
+@keyframes tapeAppear {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-18px)
+      rotate(-15deg);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes sparkleAppear {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@keyframes sparkleFloat {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-6px) scale(1.12);
+  }
+}
+
+
+@keyframes signatureAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .final-wish-content {
+    left: 42%;
+    width: 55%;
+  }
+
+  .final-wish-title {
+    font-size: clamp(52px, 6.5vw, 82px);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+  .final-wish-page {
+    min-height: 100vh;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .final-wish-background {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 40vh;
+
+    background-position: center top;
+    background-size: cover;
+  }
+
+  .final-wish-page::after {
+    left: 0;
+    top: 28vh;
+
+    width: 100%;
+    height: 20vh;
+
+    background: linear-gradient(
+      180deg,
+      rgba(88, 123, 173, 0),
+      #587bad 85%
+    );
+  }
+
+  .final-wish-content {
+    position: relative;
+
+    left: auto;
+    top: auto;
+
+    width: 92%;
+
+    margin: 39vh auto 0;
+
+    padding:
+      65px
+      0
+      180px;
+
+    transform: none;
+  }
+
+  .final-wish-eyebrow {
+    font-size: 20px;
+
+    margin-bottom: 20px;
+  }
+
+  .final-wish-title {
+    font-size: clamp(46px, 14vw, 68px);
+
+    line-height: 0.88;
+
+    letter-spacing: -2px;
+  }
+
+  .title-divider {
+    margin-top: 25px;
+  }
+
+  .title-divider i {
+    width: 32px;
+  }
+
+  .top-note {
+    left: 5%;
+    top: 29%;
+
+    width: 145px;
+
+    font-size: 13px;
+  }
+
+  .top-right-note {
+    right: 4%;
+    top: 44%;
+
+    width: 145px;
+
+    font-size: 13px;
+  }
+
+  .left-mini-note {
+    left: 5%;
+    bottom: 22%;
+
+    font-size: 13px;
+  }
+
+  .lucky-note {
+    left: 7%;
+    bottom: 10%;
+  }
+
+  .right-note {
+    width: 145px;
+
+    font-size: 34px;
+  }
+
+  .right-note-one {
+    right: 4%;
+    bottom: 24%;
+  }
+
+  .right-note-two {
+    right: 5%;
+    bottom: 9%;
+  }
+
+  .right-note-three {
+    right: 0.5%;
+    top: 57%;
+  }
+
+  .flower-sticker {
+    right: -5%;
+    bottom: 1%;
+
+    transform: scale(0.7) rotate(3deg);
+  }
+
+  .sticker-left-hearts {
+    left: 3%;
+    bottom: 30%;
+  }
+
+  .sticker-top-right-hearts {
+    right: 3%;
+    top: 38%;
+  }
+
+  .sticker-right-hearts {
+    right: 3%;
+    top: 67%;
+  }
+
+  .sticker-bottom-hearts {
+    left: 28%;
+    bottom: 4%;
+  }
+
+  .tape-left-top {
+    left: 4%;
+    top: 5%;
+  }
+
+  .tape-top-right {
+    right: 5%;
+    top: 6%;
+  }
+
+  .tape-bottom {
+    left: 57%;
+    bottom: 4%;
+  }
+
+  .bottom-signature {
+    right: 4%;
+    bottom: 2%;
+
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .final-wish-page *,
+  .final-wish-page *::before,
+  .final-wish-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

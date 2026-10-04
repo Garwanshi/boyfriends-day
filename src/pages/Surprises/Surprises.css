@@ -1,0 +1,1100 @@
+/* =====================================================
+   SURPRISES PAGE
+   BOYFRIEND'S DAY V2
+   COVER-MATCHED COLOR PALETTE
+===================================================== */
+
+.surprises-page {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 12% 15%,
+      rgba(255, 255, 255, 0.14),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 88% 80%,
+      rgba(255, 255, 255, 0.10),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #7898c9 0%,
+      #6689bd 45%,
+      #587bad 100%
+    );
+}
+
+
+/* =====================================================
+   PAPER
+===================================================== */
+
+.surprises-paper {
+  position: relative;
+
+  width: min(1180px, 100%);
+  min-height: calc(100vh - 64px);
+
+  overflow: visible;
+
+  padding: 55px 65px;
+
+  background-color: #f8f4e9;
+
+  background-image:
+    linear-gradient(
+      rgba(90, 110, 145, 0.10) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(90, 110, 145, 0.10) 1px,
+      transparent 1px
+    );
+
+  background-size: 25px 25px;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 24px 60px rgba(19, 38, 70, 0.28),
+    0 4px 12px rgba(25, 52, 91, 0.14);
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.surprises-back-button {
+  position: absolute;
+
+  top: 24px;
+  left: 24px;
+
+  padding: 7px 13px;
+
+  border: 1.5px solid #7898c9;
+  border-radius: 18px;
+
+  background: rgba(255, 250, 240, 0.88);
+
+  color: #284b7e;
+
+  font-family:
+    "Comic Sans MS",
+    "Segoe Print",
+    cursive;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 3px 7px rgba(25, 52, 91, 0.12);
+
+  z-index: 15;
+
+  transform: rotate(-2deg);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.surprises-back-button:hover {
+  transform:
+    rotate(-2deg)
+    translateY(-2px);
+
+  background: #fffaf0;
+
+  box-shadow:
+    0 5px 10px rgba(25, 52, 91, 0.18);
+}
+
+.surprises-back-button:active {
+  transform:
+    rotate(-2deg)
+    translateY(0);
+}
+
+.surprises-back-button:focus-visible {
+  outline:
+    2px dashed
+    #5279b4;
+
+  outline-offset: 4px;
+
+  border-radius: 18px;
+}
+
+
+/* =====================================================
+   TAPE
+===================================================== */
+
+.paper-tape {
+  position: absolute;
+
+  width: 125px;
+  height: 34px;
+
+  opacity: 0.8;
+
+  z-index: 3;
+}
+
+
+.tape-one {
+  top: -8px;
+  left: 16%;
+
+  background: rgba(91, 127, 183, 0.82);
+
+  transform: rotate(-5deg);
+}
+
+
+.tape-two {
+  top: 20px;
+  right: 8%;
+
+  background: #b9cbe3;
+
+  transform: rotate(7deg);
+}
+
+
+/* =====================================================
+   NOTE
+===================================================== */
+
+.surprise-note {
+  position: absolute;
+
+  top: 52px;
+  left: 70px;
+
+  color: #243e6a;
+
+  font-family:
+    "Comic Sans MS",
+    "Segoe Print",
+    cursive;
+
+  font-size: 18px;
+
+  transform: rotate(-5deg);
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.surprise-heading {
+  position: relative;
+
+  z-index: 4;
+
+  width: fit-content;
+
+  margin: 8px auto 0;
+
+  color: #1e3157;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(62px, 8vw, 105px);
+
+  font-weight: 900;
+
+  line-height: 0.9;
+
+  letter-spacing: -5px;
+
+  text-align: center;
+
+  transform: rotate(-2deg);
+
+  text-shadow:
+    2px 2px 0 #d9e0ea;
+}
+
+
+.surprise-heading span {
+  color: #1f3967;
+}
+
+
+.surprise-heading b {
+  position: absolute;
+
+  right: -38px;
+  top: -18px;
+
+  color: #587bad;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 42px;
+
+  transform: rotate(12deg);
+}
+
+
+/* =====================================================
+   HEADING SWOOSH
+===================================================== */
+
+.heading-swoosh {
+  width: 210px;
+  height: 22px;
+
+  margin: -4px auto 0;
+
+  border-bottom:
+    4px solid
+    #284b7e;
+
+  border-radius: 50%;
+
+  transform: rotate(-3deg);
+}
+
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
+
+.surprise-subtitle {
+  position: relative;
+
+  z-index: 3;
+
+  margin: 5px auto 0;
+
+  color: #53627a;
+
+  font-family:
+    "Comic Sans MS",
+    "Segoe Print",
+    cursive;
+
+  font-size: 17px;
+
+  text-align: center;
+
+  transform: rotate(2deg);
+}
+
+
+/* =====================================================
+   STICKER AREA
+===================================================== */
+
+.surprise-sticker-area {
+  position: relative;
+
+  width: min(900px, 100%);
+
+  height: 485px;
+
+  margin: 8px auto 0;
+}
+
+
+/* =====================================================
+   COMMON STICKER
+===================================================== */
+
+.sticker-object {
+  position: absolute;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  appearance: none;
+
+  z-index: 5;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+
+.sticker-object svg {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: visible;
+}
+
+
+.sticker-object:focus-visible {
+  outline:
+    3px dashed
+    #284b7e;
+
+  outline-offset: 7px;
+
+  border-radius: 30px;
+}
+
+
+/* =====================================================
+   CAMERA
+===================================================== */
+
+.sticker-camera {
+  width: 270px;
+  height: 220px;
+
+  left: 20px;
+  top: 25px;
+
+  transform: rotate(-7deg);
+}
+
+
+.sticker-camera:hover {
+  transform:
+    rotate(-10deg)
+    translateY(-8px)
+    scale(1.07);
+
+  filter:
+    drop-shadow(
+      0 12px 12px
+      rgba(25, 52, 91, 0.20)
+    );
+}
+
+
+.sticker-camera:active {
+  transform:
+    rotate(-7deg)
+    scale(0.95);
+}
+
+
+/* =====================================================
+   CONSOLE
+===================================================== */
+
+.sticker-console {
+  width: 285px;
+  height: 220px;
+
+  right: 5px;
+  top: 25px;
+
+  transform: rotate(6deg);
+}
+
+
+.sticker-console:hover {
+  transform:
+    rotate(10deg)
+    translateY(-8px)
+    scale(1.07);
+
+  filter:
+    drop-shadow(
+      0 12px 12px
+      rgba(25, 52, 91, 0.20)
+    );
+}
+
+
+.sticker-console:active {
+  transform:
+    rotate(6deg)
+    scale(0.95);
+}
+
+
+/* =====================================================
+   ENVELOPE
+===================================================== */
+
+.sticker-envelope {
+  width: 280px;
+  height: 220px;
+
+  left: 190px;
+  bottom: 0;
+
+  transform: rotate(-5deg);
+}
+
+
+.sticker-envelope:hover {
+  transform:
+    rotate(-9deg)
+    translateY(-10px)
+    scale(1.07);
+
+  filter:
+    drop-shadow(
+      0 12px 12px
+      rgba(25, 52, 91, 0.20)
+    );
+}
+
+
+.sticker-envelope:active {
+  transform:
+    rotate(-5deg)
+    scale(0.95);
+}
+
+
+/* =====================================================
+   BOUQUET
+===================================================== */
+
+.sticker-bouquet {
+  width: 210px;
+  height: 260px;
+
+  right: 55px;
+  bottom: 15px;
+
+  transform: rotate(5deg);
+}
+
+
+.sticker-bouquet:hover {
+  transform:
+    rotate(9deg)
+    translateY(-10px)
+    scale(1.06);
+
+  filter:
+    drop-shadow(
+      0 14px 14px
+      rgba(25, 52, 91, 0.20)
+    );
+}
+
+
+.sticker-bouquet:active {
+  transform:
+    rotate(5deg)
+    scale(0.95);
+}
+
+
+/* =====================================================
+   SPARKLES
+===================================================== */
+
+.surprise-sparkle {
+  position: absolute;
+
+  z-index: 3;
+
+  color: #5279b4;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 34px;
+
+  line-height: 1;
+
+  pointer-events: none;
+}
+
+
+.sparkle-a {
+  left: 300px;
+  top: 5px;
+
+  transform: rotate(15deg);
+}
+
+
+.sparkle-b {
+  right: 285px;
+  top: 195px;
+
+  color: #7898c9;
+
+  font-size: 27px;
+
+  transform: rotate(-10deg);
+}
+
+
+.sparkle-c {
+  left: 105px;
+  bottom: 50px;
+
+  color: #6689bd;
+
+  font-size: 28px;
+}
+
+
+.sparkle-d {
+  left: 465px;
+  top: 105px;
+
+  font-size: 22px;
+}
+
+
+/* =====================================================
+   HEARTS
+===================================================== */
+
+.tiny-heart {
+  position: absolute;
+
+  z-index: 3;
+
+  color: #7898c9;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 30px;
+
+  pointer-events: none;
+}
+
+
+.heart-a {
+  left: 10px;
+  top: 190px;
+
+  transform: rotate(-15deg);
+}
+
+
+.heart-b {
+  right: 250px;
+  bottom: 15px;
+
+  color: #5279b4;
+
+  transform: rotate(12deg);
+}
+
+
+/* =====================================================
+   MY SPECIAL WISH
+   OUTSIDE THE PAPER
+   PINK ROMANTIC BUTTON
+===================================================== */
+
+.special-wish-button {
+  position: absolute;
+
+  right: 0px;
+  bottom: -29px;
+
+  min-width: 150px;
+
+  padding:
+    8px
+    18px;
+
+  border:
+    1.5px solid
+    #d89aaa;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f4b6c4,
+      #e89aaa
+    );
+
+  color: #fffaf7;
+
+  font-family:
+    "Brush Script MT",
+    "Segoe Script",
+    "Lucida Handwriting",
+    cursive;
+
+  font-size: 17px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.3px;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transform: none;
+
+  box-shadow:
+    0 4px 10px
+    rgba(92, 47, 67, 0.20),
+    0 0 0 3px
+    rgba(255, 255, 255, 0.18);
+
+  z-index: 20;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+
+/* =====================================================
+   SMALL HEART
+===================================================== */
+
+.special-wish-button::before {
+  content: "♡";
+
+  position: absolute;
+
+  left: -7px;
+  top: -8px;
+
+  width: 21px;
+  height: 21px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff5f6;
+
+  color: #d7869a;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 15px;
+
+  box-shadow:
+    0 2px 5px
+    rgba(92, 47, 67, 0.15);
+}
+
+
+/* =====================================================
+   REMOVE OLD ARROW
+===================================================== */
+
+.special-wish-button span {
+  display: none;
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.special-wish-button:hover {
+  transform:
+    translateY(-3px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #f7bfca,
+      #eca0b1
+    );
+
+  box-shadow:
+    0 6px 14px
+    rgba(92, 47, 67, 0.25),
+    0 0 0 3px
+    rgba(255, 255, 255, 0.22);
+}
+
+
+/* =====================================================
+   CLICK
+===================================================== */
+
+.special-wish-button:active {
+  transform:
+    translateY(0);
+
+  box-shadow:
+    0 3px 7px
+    rgba(92, 47, 67, 0.18);
+}
+
+
+/* =====================================================
+   KEYBOARD FOCUS
+===================================================== */
+
+.special-wish-button:focus-visible {
+  outline:
+    2px dashed
+    #ffffff;
+
+  outline-offset: 4px;
+
+  border-radius: 22px;
+}
+
+
+/* =====================================================
+   BOTTOM NOTE
+===================================================== */
+
+.bottom-note {
+  position: absolute;
+
+  bottom: 28px;
+  left: 68px;
+
+  color: #53627a;
+
+  font-family:
+    "Comic Sans MS",
+    "Segoe Print",
+    cursive;
+
+  font-size: 15px;
+
+  transform: rotate(-4deg);
+}
+
+
+.bottom-note::after {
+  content: "";
+
+  display: block;
+
+  width: 145px;
+  height: 8px;
+
+  margin-top: -4px;
+
+  border-bottom:
+    2px solid
+    #5279b4;
+
+  border-radius: 50%;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .surprises-page {
+    padding: 16px;
+  }
+
+
+  .surprises-paper {
+    min-height: calc(100vh - 32px);
+
+    padding:
+      45px
+      25px;
+  }
+
+
+  .surprises-back-button {
+    top: 20px;
+    left: 20px;
+
+    padding: 7px 12px;
+
+    font-size: 13px;
+  }
+
+
+  .surprise-note {
+    left: 30px;
+    top: 35px;
+  }
+
+
+  .surprise-heading {
+    font-size:
+      clamp(55px, 11vw, 80px);
+  }
+
+
+  .surprise-sticker-area {
+    height: 560px;
+  }
+
+
+  .sticker-camera {
+    width: 220px;
+
+    left: 0;
+  }
+
+
+  .sticker-console {
+    width: 230px;
+
+    right: 0;
+  }
+
+
+  .sticker-envelope {
+    width: 230px;
+
+    left: 12%;
+  }
+
+
+  .sticker-bouquet {
+    width: 205px;
+
+    right: 2%;
+  }
+
+
+  .special-wish-button {
+    left: 25px;
+    bottom: -27px;
+
+    min-width: 140px;
+
+    padding:
+      7px
+      16px;
+
+    font-size: 16px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .surprises-page {
+    padding: 8px;
+
+    overflow-y: auto;
+  }
+
+
+  .surprises-paper {
+    min-height: calc(100vh - 16px);
+
+    padding:
+      38px
+      10px
+      25px;
+  }
+
+
+  .surprises-back-button {
+    top: 18px;
+    left: 16px;
+
+    padding:
+      6px
+      11px;
+
+    font-size: 13px;
+  }
+
+
+  .surprise-note {
+    left: 20px;
+
+    font-size: 13px;
+  }
+
+
+  .surprise-heading {
+    font-size: 48px;
+
+    letter-spacing: -3px;
+  }
+
+
+  .surprise-heading b {
+    right: -28px;
+
+    font-size: 30px;
+  }
+
+
+  .heading-swoosh {
+    width: 145px;
+  }
+
+
+  .surprise-subtitle {
+    font-size: 13px;
+  }
+
+
+  .surprise-sticker-area {
+    height: 530px;
+  }
+
+
+  .sticker-camera {
+    width: 175px;
+    height: 160px;
+
+    left: -5px;
+    top: 25px;
+  }
+
+
+  .sticker-console {
+    width: 185px;
+    height: 150px;
+
+    right: -8px;
+    top: 30px;
+  }
+
+
+  .sticker-envelope {
+    width: 190px;
+    height: 160px;
+
+    left: 3%;
+    bottom: 50px;
+  }
+
+
+  .sticker-bouquet {
+    width: 165px;
+    height: 205px;
+
+    right: -3px;
+    bottom: 15px;
+  }
+
+
+  .special-wish-button {
+    left: 16px;
+    bottom: -25px;
+
+    min-width: 135px;
+
+    padding:
+      6px
+      14px;
+
+    font-size: 15px;
+  }
+
+
+  .special-wish-button::before {
+    width: 19px;
+    height: 19px;
+
+    left: -6px;
+    top: -7px;
+
+    font-size: 14px;
+  }
+
+
+  .sparkle-a {
+    left: 42%;
+    top: 0;
+  }
+
+
+  .sparkle-b {
+    right: 20%;
+    top: 210px;
+  }
+
+
+  .sparkle-c {
+    left: 25%;
+    bottom: 25px;
+  }
+
+
+  .sparkle-d {
+    left: 47%;
+    top: 115px;
+  }
+
+
+  .heart-a {
+    left: 3px;
+    top: 190px;
+  }
+
+
+  .heart-b {
+    right: 22%;
+    bottom: 5px;
+  }
+
+
+  .bottom-note {
+    left: 20px;
+    bottom: 12px;
+
+    font-size: 12px;
+  }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .sticker-object,
+  .special-wish-button,
+  .surprises-back-button {
+    transition: none;
+  }
+
+}

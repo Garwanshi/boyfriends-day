@@ -1,0 +1,173 @@
+/* =========================================
+   MUSIC PLAYER
+   ♪ OFF  →  ♥ ON
+   ========================================= */
+
+.music-player {
+  position: fixed;
+
+  right: 28px;
+  bottom: 28px;
+
+  z-index: 1000;
+
+  width: 58px;
+  height: 58px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+
+/* =========================================
+   SYMBOL
+   ========================================= */
+
+.music-symbol {
+  display: block;
+
+  color: var(--blue);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 48px;
+
+  line-height: 1;
+
+  text-shadow:
+    0 5px 12px rgba(63, 113, 147, 0.18);
+
+  transition:
+    color 0.3s ease,
+    transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    text-shadow 0.3s ease;
+}
+
+/* =========================================
+   MUSIC OFF
+   ♪
+   ========================================= */
+
+.music-player:not(.music-player--playing)
+  .music-symbol {
+  transform:
+    rotate(-8deg)
+    scale(1);
+}
+
+/* =========================================
+   MUSIC ON
+   ♥
+   ========================================= */
+
+.music-player--playing .music-symbol {
+  color: #3f7193;
+
+  transform:
+    rotate(0deg)
+    scale(1.08);
+
+  animation:
+    heartBeat 2s ease-in-out infinite;
+}
+
+/* =========================================
+   HOVER
+   ========================================= */
+
+.music-player:hover {
+  transform:
+    translateY(-4px)
+    scale(1.08);
+}
+
+.music-player:hover .music-symbol {
+  text-shadow:
+    0 7px 16px rgba(63, 113, 147, 0.25);
+}
+
+/* =========================================
+   CLICK
+   ========================================= */
+
+.music-player:active {
+  transform:
+    translateY(-1px)
+    scale(0.92);
+}
+
+/* =========================================
+   FOCUS
+   ========================================= */
+
+.music-player:focus-visible {
+  outline:
+    2px solid
+    var(--blue);
+
+  outline-offset: 5px;
+
+  border-radius: 50%;
+}
+
+/* =========================================
+   HEART ANIMATION
+   ========================================= */
+
+@keyframes heartBeat {
+  0%,
+  100% {
+    transform:
+      scale(1.08);
+  }
+
+  50% {
+    transform:
+      scale(1.18);
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+  .music-player {
+    right: 18px;
+    bottom: 18px;
+
+    width: 52px;
+    height: 52px;
+  }
+
+  .music-symbol {
+    font-size: 43px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .music-player,
+  .music-symbol {
+    transition: none;
+    animation: none;
+  }
+}

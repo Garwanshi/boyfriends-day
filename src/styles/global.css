@@ -1,0 +1,268 @@
+/* =========================================
+   BOYFRIEND'S DAY
+   GLOBAL STYLES
+   ========================================= */
+
+
+/* =========================================
+   ROOT VARIABLES
+   ========================================= */
+
+:root {
+  --blue-dark: #173b56;
+  --blue: #3f7193;
+  --blue-light: #dcecf4;
+
+  --cream: #f7f0e5;
+  --paper: #fffdf8;
+  --paper-dark: #eee4d5;
+
+  --text-dark: #243746;
+  --text-muted: #71808b;
+  --white: #ffffff;
+
+  --line: #c9d8df;
+
+  --shadow-soft: 0 12px 35px rgba(23, 59, 86, 0.12);
+  --shadow-small: 0 5px 15px rgba(23, 59, 86, 0.08);
+
+  --radius: 18px;
+  --radius-small: 10px;
+}
+
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  min-width: 320px;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.9),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      var(--cream),
+      #edf5f8
+    );
+
+  color: var(--text-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   BASIC ELEMENTS
+   ========================================= */
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+
+/* =========================================
+   ROOT
+   ========================================= */
+
+#root {
+  min-height: 100vh;
+}
+
+
+/* =========================================
+   APP CONTAINER
+   ========================================= */
+
+.app {
+  width: 100%;
+
+  min-height: 100vh;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+
+/* =========================================
+   PAPER STYLE
+   ========================================= */
+
+.paper {
+  position: relative;
+
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.72),
+      rgba(255, 255, 255, 0.72)
+    ),
+    var(--paper);
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   SUBTLE PAPER TEXTURE
+   ========================================= */
+
+.paper::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.08;
+
+  background-image:
+    radial-gradient(
+      #536b78 0.6px,
+      transparent 0.6px
+    );
+
+  background-size: 8px 8px;
+}
+
+
+/* =========================================
+   TYPOGRAPHY
+   ========================================= */
+
+.eyebrow {
+  display: block;
+
+  color: var(--blue);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.25em;
+
+  text-transform: uppercase;
+}
+
+
+.handwritten {
+  font-family:
+    "Comic Sans MS",
+    "Segoe Print",
+    cursive;
+
+  font-style: italic;
+}
+
+
+/* =========================================
+   COMMON BUTTON
+   ========================================= */
+
+.primary-button {
+  border: none;
+
+  padding: 12px 22px;
+
+  border-radius: 999px;
+
+  background: var(--blue-dark);
+
+  color: var(--white);
+
+  font-size: 14px;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.primary-button:hover {
+  background: var(--blue);
+
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-small);
+}
+
+
+/* =========================================
+   COMMON PAGE
+   ========================================= */
+
+.page {
+  position: relative;
+
+  min-height: 100vh;
+
+  animation:
+    pageEnter 0.5s ease;
+}
+
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
